@@ -3,14 +3,13 @@ import Header from './components/Header/Header';
 import InsertSpace from './components/InsertSpace/InsertSpace';
 import DataSpace from './components/DataSpace/DataSpace';
 import './App.css'
-//const baseUrl = 'https://viacep.com.br/ws/49088-245/json/'
+
 function App() {
     const [ cep, setCep] = useState('');
     const [ rua, setRua] = useState('');
     const [ cidade, setCidade] = useState('');
     const [ estado, setEstado] = useState('');
     const [ bairro, setBairro] = useState('');
-    //let show:boolean = false
     const getUser = async () => {
         
         const req = await fetch(`https://ws.apicep.com/cep/${cep}.json`);
